@@ -1,0 +1,220 @@
+// Variables
+
+@import 'animations';
+
+$brand-orange: #F26132;
+$brand-charcoal: #232323;
+$light-grey: #dcdcdc;
+$white: #fff;
+$black: #000;
+
+body, html {
+	height: 100%;
+	margin: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 1.6em;
+	color: $white;
+}
+
+.header {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 35px;
+    left: 0;
+    width: 100%;
+    .header-logo {
+        float: left;
+        width: 130px;
+    }
+    a {
+        display: inline;
+        padding: 0 3%;
+        color: #fff;
+        font-weight: 600;
+        text-decoration: none;
+    }
+}
+
+.navigation {
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    ul {
+        list-style-type: none;
+        li {
+            height: 14px;
+            width: 14px;
+            margin: 7px 0;
+            border-radius: 100%;
+            border: 2px $light-grey solid;
+            cursor: pointer;
+            &.is-active {
+                background: $light-grey;
+            }
+        }
+    }
+}
+
+.panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100%;
+    
+    &.one {
+        background-color: $brand-orange;
+        background-image: url('../img/glasses.png');
+        background-repeat: repeat;
+        background-size: 150px;
+        animation: slide-left 60s linear infinite;
+
+        .panel-background {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center; 
+            width: 100%;
+            min-height: 100vh;
+            background-image: url('../img/glasses-light.png');
+            background-repeat: repeat;
+            background-size: 150px;
+            background-attachment: fixed;
+            animation: slide-right 60s linear infinite;
+        }
+    }
+
+    &.two,
+    &.three,
+    &.five {
+        background-image: url('http://i.imgur.com/M3HrQyO.jpg');
+        border: 30px $white solid;
+        .container {
+            text-align: center;
+            padding: 4% 3%;
+            background: rgba($brand-orange,.9);
+            border-radius: 10px;
+        }
+    }
+
+    &.three {
+        background-image: url('https://images.unsplash.com/photo-1530127796739-53cf66b0e64d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80');
+    }
+
+    &.four {
+        background-color: $brand-orange;
+        background-image: url('../img/aby-headshot.png');
+        background-repeat: repeat;
+        background-size: 132px;
+        animation: slide-left-large 60s linear infinite;
+        min-height: 50%;
+        .panel-background {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            min-height: 50vh;
+            background-image: url('../img/aby-headshot.png');
+            background-repeat: repeat;
+            background-size: 132px;
+            background-attachment: fixed;
+            animation: slide-right-large 60s linear infinite;
+        }
+    }
+
+    &.five {
+        background-image: url('https://images.unsplash.com/photo-1496024840928-4c417adf211d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80');
+    }
+} 
+
+section {
+    padding: 12% 0;
+    background: $brand-charcoal;
+    &.white-background {
+        background-color: $white;
+        color: $brand-charcoal;
+    }
+    
+}
+
+.container {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+.panel-copy {
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    font-size: 2.8em;
+    font-weight: 600;
+    span {
+        font-weight: 600;
+        font-family: "Source Serif Pro", Georgia, serif;
+    }
+}
+
+h2 {
+    font-size: 1.8em;
+    line-height: 1.2em;
+    font-family: "Source Serif Pro", Georgia, serif;
+}
+
+h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+span {
+    font-weight: 400;
+}
+
+.secondary-button {
+    display: inline-block;
+    margin-top: 1em;
+    padding: .8em 2em;
+    font-weight: 600;
+    font-size: .8em;
+    text-decoration: none;
+    color: $white;
+    border: 1px $white solid;
+    border-radius: 4px;
+    transition: all .3s ease;
+
+    &:hover {
+        opacity: .8;
+        background: rgba($black,.1);
+    }
+
+    &:active {
+        transform: translateY(3px);
+    }
+}
+
+.orange-text {
+    color: $brand-orange;
+}
+
+
+.small-avatar {
+    float: right;
+    width: 40%;
+    margin: 2em;
+    border-radius: 100%;
+    background: #D3f2ff;
+    animation: hover-up-shadow 10s ease-in-out infinite;
+}
+
+.aby-front {
+    float: right;
+    width: 200px;
+    padding: 2em;
+}
