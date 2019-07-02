@@ -73,7 +73,7 @@ body, html {
         background-image: url('../img/glasses.png');
         background-repeat: repeat;
         background-size: 150px;
-        animation: slide-left 60s linear infinite;
+        animation: slide-left 5s linear infinite;
 
         .panel-background {
             display: flex;
@@ -86,7 +86,7 @@ body, html {
             background-repeat: repeat;
             background-size: 150px;
             background-attachment: fixed;
-            animation: slide-right 60s linear infinite;
+            animation: slide-right 5s linear infinite;
         }
     }
 
@@ -112,7 +112,7 @@ body, html {
         background-image: url('../img/aby-headshot.png');
         background-repeat: repeat;
         background-size: 132px;
-        animation: slide-left-large 60s linear infinite;
+        animation: slide-left-large 5s linear infinite;
         min-height: 50%;
         .panel-background {
             display: flex;
@@ -124,7 +124,7 @@ body, html {
             background-repeat: repeat;
             background-size: 132px;
             background-attachment: fixed;
-            animation: slide-right-large 60s linear infinite;
+            animation: slide-right-large 5s linear infinite;
         }
     }
 
