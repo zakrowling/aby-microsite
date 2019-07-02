@@ -73,7 +73,7 @@ body, html {
         background-image: url('../img/glasses.png');
         background-repeat: repeat;
         background-size: 150px;
-        animation: slide-left 5s linear infinite;
+        animation: slide-left 8s linear infinite;
 
         .panel-background {
             display: flex;
@@ -86,7 +86,7 @@ body, html {
             background-repeat: repeat;
             background-size: 150px;
             background-attachment: fixed;
-            animation: slide-right 5s linear infinite;
+            animation: slide-right 8s linear infinite;
         }
     }
 
