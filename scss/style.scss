@@ -1,6 +1,9 @@
 // Variables
 
 @import 'mixins';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700');
+@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro:300,600,700');
+@import url('https://fonts.googleapis.com/css?family=Homemade+Apple');
 
 $brand-orange: #F26132;
 $brand-charcoal: #232323;
@@ -52,6 +55,8 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-size: contain;
+    background-position: center center;
     
     &.one,
     &.eight {
@@ -78,30 +83,58 @@ body, html {
     }
 
     &.three,
-    &.five {
-        background-image: url('http://i.imgur.com/M3HrQyO.jpg');
+    &.five,
+    &.seven {
         background-size: cover;
-        border: 16px $white solid;
+        background-position: center center;
 
         .container {
-            text-align: center;
-            padding: 4% 3%;
-            background: rgba($brand-orange,.9);
-            border-radius: 10px;
+            background-image: repeating-linear-gradient(135deg, #c03c41 0px, #c03c41 30px, transparent 30px, transparent 50px, #4567ae 50px, #4567ae 80px, transparent 80px, transparent 100px);
+            background-color: #fff;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            box-shadow: 0px 10px 10px 0 rgba(0,0,0,0.2);
+            cursor: pointer;
+            padding: 15px 0 0 0;
+            text-align: left;
+            transform: rotate(-4deg);
+            transition: all .5s ease;
 
-            @include device-mobile {
-                border-radius: 0;
-                padding: 15% 10%;
+            &:hover {
+                transform: scale(1.1) rotate(0deg);
+            }
+          
+            .container-inner {
+                background: $white;
+                color: $brand-charcoal;
+                font: 1.2em "Homemade Apple", cursive;
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+                line-height: 1.5em;
+                padding: 5% 7%;
+
+                .stamp {
+                    float: right;
+                }
+
+                h2 {
+                    padding-top: 5px;
+                    font: bold 1.2em "Homemade Apple", cursive;  
+                }
             }
         }
     }
 
     &.three {
-        background-image: url('https://images.unsplash.com/photo-1530127796739-53cf66b0e64d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80');
+        background-image: url('https://images.unsplash.com/photo-1510820893572-6df79cee4857?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=80');
     }
 
     &.five {
-        background-image: url('https://images.unsplash.com/photo-1496024840928-4c417adf211d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80');
+        background-image: url('https://images.unsplash.com/photo-1530127796739-53cf66b0e64d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80');
+    }
+
+    &.seven {
+        background-image: url('https://images.unsplash.com/photo-1496024840928-4c417adf211d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=80');
     }
 } 
 
@@ -144,6 +177,7 @@ body, html {
 h1 {
     font-size: 2.8em;
     font-weight: 600;
+    line-height: 1em;
     span {
         font-weight: 600;
         font-family: "Source Serif Pro", Georgia, serif;
