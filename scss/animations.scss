@@ -38,45 +38,6 @@
 }
 
 
-/* Aunt Betty Headshots */
-
-@-webkit-keyframes slide-left-large {
-    from {
-        background-position: 0% 0%;
-    }
-    to {
-        background-position: -132px 0%;
-    }
-}
-
-@keyframes slide-left-large {
-    from {
-        background-position: 0% 0%;
-    }
-    to {
-        background-position: -132px 0%;
-    }
-}
-
-@-webkit-keyframes slide-right-large {
-    from {
-        background-position: 0% 20.2%;
-    }
-    to {
-        background-position: 132px 20.2%;
-    }
-}
-
-@keyframes slide-right-large {
-    from {
-        background-position: 0% 20.2%;
-    }
-    to {
-        background-position: 132px 20.2%;
-    }
-}
-
-
 /* Hovering */
 
 @-webkit-keyframes hover-up-shadow {
@@ -87,7 +48,7 @@
     }
     50% {
         transform: translateY(-30px);
-        box-shadow: 0px 110px 100px -5px rgba(0,0,0,0.9);
+        box-shadow: 0px 70px 70px -5px rgba(0,0,0,0.9);
     }
 }
 
@@ -98,6 +59,6 @@
     }
     50% {
         transform: translateY(-30px);
-        box-shadow: 0px 110px 100px -5px rgba(0,0,0,0.9);
+        box-shadow: 0px 70px 70px -5px rgba(0,0,0,0.9);
     }
 }
