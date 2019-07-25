@@ -2,7 +2,6 @@
 @import 'mixins';
 
 
-
 .envelope {
     width: 15em;
     height: 5em;
@@ -131,7 +130,8 @@
     .postcard-inner {
         background: $white;
         color: $brand-charcoal;
-        font: 1.2em "Homemade Apple", cursive;
+        font-size: 1.2em;
+        font-family: $cursive;
         border-bottom-left-radius: 4px;
         border-bottom-right-radius: 4px;
         line-height: 1.5em;
@@ -143,7 +143,9 @@
 
         h2 {
             padding-top: 5px;
-            font: bold 1.2em "Homemade Apple", cursive;  
+            font-size: 1.2em;
+            font-weight: bold;
+            font-family: $cursive;  
         }
     }
 }
@@ -157,7 +159,7 @@
 
     &.is-open {
         padding: 0;
-        
+
         .envelope {
             &:after,
             .message-title {

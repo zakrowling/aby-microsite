@@ -4,12 +4,13 @@
 @import url('https://fonts.googleapis.com/css?family=Homemade+Apple');
 
 @import 'mixins';
+@import 'panels';
 @import 'envelope';
 
 body, html {
 	height: 100%;
 	margin: 0;
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: $sans-serif;
 	font-size: 20px;
 	font-weight: 400;
     line-height: 1.6em;
@@ -39,14 +40,7 @@ body, html {
     .header-logo {
         float: left;
         width: 130px;
-    }
-    a {
-        display: inline;
-        padding: 0 3%;
-        color: rgb(160, 149, 149);
-        font-weight: 600;
-        text-decoration: none;
-    }    
+    }   
 }
 
 .arrow {
@@ -76,112 +70,31 @@ body, html {
     }
 }
 
-.panel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-size: contain;
-    background-position: center center;
-    
-    &.one,
-    &.ten {
-        background-color: $brand-orange;
-        background-image: url('../img/plane-dark.png');
-        background-repeat: repeat;
-        background-size: 122px;
-        animation: slide-right 12s linear infinite;
-        color: $white;
-
-        .panel-background {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center; 
-            width: 100%;
-            min-height: 100vh;
-            background-image: url('../img/plane-light.png');
-            background-repeat: repeat;
-            background-size: 122px;
-            background-attachment: fixed;
-            animation: slide-left 12s linear infinite;
-        }
-    }
-
-    &.three,
-    &.five,
-    &.seven,
-    &.nine {
-        background-size: cover;
-        background-position: center center;
-    }
-
-    &.three {
-        background-image: url('https://images.unsplash.com/photo-1510820893572-6df79cee4857?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80');
-    }
-
-    &.five {
-        background-image: url('https://images.unsplash.com/photo-1530127796739-53cf66b0e64d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80');
-    }
-
-    &.seven {
-        background-image: url('https://images.unsplash.com/photo-1533760881669-80db4d7b4c15?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80');
-    }
-
-    &.nine {
-        background-image: url('https://images.unsplash.com/photo-1529108190281-9a4f620bc2d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80');
-    }
-} 
-
-.section {
-    background: $brand-charcoal;
-
-    &.white-background {
-        background-color: $light-grey;
-        color: $brand-charcoal;
-    }
-}
-
-#pp-nav li {
-    padding: .5em 1em;
-    a {
-        span {
-            width: .75em;
-            height: .75em;
-        }
-        &.active {
-            span {
-                background-color: $white;
-            }
-        }
-    }
-}
-
-.container {
-    margin: 0 auto;
-    max-width: 700px;
-    width: 50%;
-
-    @include device-small {
-        width: 100%;
-        padding: 0 10%;
-        max-width: auto;
-    }
-}
-
 h1 {
-    font-size: 3em;
+    font-size: 3.26em;
     font-weight: 700;
-    line-height: 1em;
-    span {
+    line-height: .8em;
+    border-bottom: 2px $white solid;
+    display: inline-block;
+    margin-bottom: .2em;
+    padding-bottom: .7em;
+    b {
+        font-family: $sans-serif;
+        font-size: .55em;
         font-weight: 600;
-        font-family: "Source Serif Pro", Georgia, serif;
+        letter-spacing: 8px;
+        text-transform: uppercase;
+    }
+    span {
+        font-weight: 500;
+        font-family: $serif;
     }
 }
 
 h2 {
     font-size: 1.8em;
     line-height: 1.2em;
-    font-family: "Source Serif Pro", Georgia, serif;
+    font-family: $serif;
 }
 
 h3 {
@@ -213,22 +126,4 @@ span {
     &:active {
         transform: translateY(3px);
     }
-}
-
-.orange-text {
-    color: $brand-orange;
-}
-
-.small-avatar {
-    width: 45%;
-    margin: 2em 2em 0;
-    border-radius: 100%;
-    background: #D3f2ff;
-    animation: hover-up-shadow 10s ease-in-out infinite;
-}
-
-.aby-front {
-    float: right;
-    width: 30%;
-    padding: 2em;
 }
