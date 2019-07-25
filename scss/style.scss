@@ -46,6 +46,33 @@ body, html {
         color: rgb(160, 149, 149);
         font-weight: 600;
         text-decoration: none;
+    }    
+}
+
+.arrow {
+    position: absolute;
+    bottom: 1em;
+    z-index: 100;
+    width: 100%;
+    text-align: center;
+
+    @include device-mobile {
+        display: none;
+    }
+
+    i {
+        height: 25px;
+        width: 1px;
+        display: inline-block;
+        border-left: 3px solid $white;
+        
+        &.left {
+            transform: rotate(-45deg);
+        }
+        
+        &.right {
+            transform: rotate(45deg) translate(7px, -7px);
+        }
     }
 }
 
