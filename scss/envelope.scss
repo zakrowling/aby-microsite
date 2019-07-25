@@ -156,31 +156,35 @@
     position: relative;
 
     &.is-open {
+        padding: 0;
         
         .envelope {
             &:after,
             .message-title {
                 display: none;
             }
-            .back {
-                top: 2em;
-                z-index: 0;
-                .paper {
-                    top: -2em;
-                    z-index: 45;
-                    height: 10em;
-                    transition: z-index 1s ease-in-out, top 1s ease-in-out, height 1s ease-in-out;
-                    transition-delay: 1s;
+
+            @include device-large {
+                .back {
+                    top: 2em;
+                    z-index: 0;
+                    .paper {
+                        top: -2em;
+                        z-index: 45;
+                        height: 10em;
+                        transition: z-index 1s ease-in-out, top 1s ease-in-out, height 1s ease-in-out;
+                        transition-delay: 1s;
+                    }
                 }
-            }
-            
-            .cover {
-                border-top: 5em solid $light-grey;	
-                -moz-transform: translate(-50%,-100%)   scaleY(-1);
-                -webkit-transform: translate(-50%,-100%)   scaleY(-1);
-                transform: translate(-50%,-100%)   scaleY(-1);
-                z-index: 0;
-                transition-delay: 0s; 
+                
+                .cover {
+                    border-top: 5em solid $light-grey;	
+                    -moz-transform: translate(-50%,-100%)   scaleY(-1);
+                    -webkit-transform: translate(-50%,-100%)   scaleY(-1);
+                    transform: translate(-50%,-100%)   scaleY(-1);
+                    z-index: 0;
+                    transition-delay: 0s; 
+                }
             }
         }
 

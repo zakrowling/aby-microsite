@@ -17,6 +17,6 @@ $(document).ready(function() {
         $(this).parent('.container').addClass('is-open');
         setTimeout(function() {
             $('.is-open .postcard').addClass('is-displayed');
-        },2000);
+        },1800);
     })
 });

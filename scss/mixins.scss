@@ -9,13 +9,19 @@ $black: #000;
 
 // Hovering avatars
 
-@mixin device-mobile {
+@mixin device-small {
     @media (max-width: 700px) {
         @content;
     }
 }
 
-// Glasses animation
+@mixin device-large {
+    @media (min-width: 700px) {
+        @content;
+    }
+}
+
+// Plane animation
 
 @-webkit-keyframes slide-left {
     from {
