@@ -86,10 +86,10 @@ body, html {
     &.one,
     &.ten {
         background-color: $brand-orange;
-        background-image: url('../img/glasses.png');
+        background-image: url('../img/plane-dark.png');
         background-repeat: repeat;
-        background-size: 150px;
-        animation: slide-left 8s linear infinite;
+        background-size: 122px;
+        animation: slide-right 12s linear infinite;
         color: $white;
 
         .panel-background {
@@ -99,11 +99,11 @@ body, html {
             text-align: center; 
             width: 100%;
             min-height: 100vh;
-            background-image: url('../img/glasses-light.png');
+            background-image: url('../img/plane-light.png');
             background-repeat: repeat;
-            background-size: 150px;
+            background-size: 122px;
             background-attachment: fixed;
-            animation: slide-right 8s linear infinite;
+            animation: slide-left 12s linear infinite;
         }
     }
 
