@@ -7,13 +7,12 @@
     background-size: contain;
     background-position: center center;
     
-    &.one,
-    &.ten {
+    &.one {
         background-color: $brand-orange;
         background-image: url('../img/plane-dark.png');
         background-repeat: repeat;
         background-size: 122px;
-        animation: slide-right 12s linear infinite;
+        animation: slide-right 5s linear infinite;
         color: $white;
 
         .panel-background {
@@ -27,7 +26,7 @@
             background-repeat: repeat;
             background-size: 122px;
             background-attachment: fixed;
-            animation: slide-left 12s linear infinite;
+            animation: slide-left 5s linear infinite;
         }
     }
 
@@ -53,6 +52,10 @@
 
     &.nine {
         background-image: url('https://images.unsplash.com/photo-1529108190281-9a4f620bc2d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80');
+    }
+
+    &.ten {
+        background-color: $brand-orange;
     }
 } 
 
@@ -98,4 +101,9 @@
     border-radius: 100%;
     background: #D3f2ff;
     animation: hover-up-shadow 10s ease-in-out infinite;
+}
+
+.search-panel {
+    width: 100%;
+    box-shadow: 0 0 2em rgba(darken($black,30%),.15);
 }
