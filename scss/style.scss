@@ -1,15 +1,10 @@
 // Variables
-
-@import 'mixins';
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700');
 @import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro:300,600,700');
 @import url('https://fonts.googleapis.com/css?family=Homemade+Apple');
 
-$brand-orange: #F26132;
-$brand-charcoal: #232323;
-$light-grey: #dcdcdc;
-$white: #fff;
-$black: #000;
+@import 'mixins';
+@import 'envelope';
 
 body, html {
 	height: 100%;
@@ -91,42 +86,6 @@ body, html {
     &.nine {
         background-size: cover;
         background-position: center center;
-
-        .container {
-            background-image: repeating-linear-gradient(135deg, #c03c41 0px, #c03c41 30px, transparent 30px, transparent 50px, #4567ae 50px, #4567ae 80px, transparent 80px, transparent 100px);
-            background-color: #fff;
-            border-top-left-radius: 4px;
-            border-top-right-radius: 4px;
-            box-shadow: 0px 10px 10px 0 rgba(0,0,0,0.2);
-            cursor: pointer;
-            padding: 15px 0 0 0;
-            text-align: left;
-            transform: rotate(-4deg);
-            transition: all .5s ease;
-
-            &:hover {
-                transform: scale(1.1) rotate(0deg);
-            }
-          
-            .container-inner {
-                background: $white;
-                color: $brand-charcoal;
-                font: 1.2em "Homemade Apple", cursive;
-                border-bottom-left-radius: 4px;
-                border-bottom-right-radius: 4px;
-                line-height: 1.5em;
-                padding: 5% 7%;
-
-                .stamp {
-                    float: right;
-                }
-
-                h2 {
-                    padding-top: 5px;
-                    font: bold 1.2em "Homemade Apple", cursive;  
-                }
-            }
-        }
     }
 
     &.three {
@@ -183,8 +142,8 @@ body, html {
 }
 
 h1 {
-    font-size: 2.8em;
-    font-weight: 600;
+    font-size: 3em;
+    font-weight: 700;
     line-height: 1em;
     span {
         font-weight: 600;
