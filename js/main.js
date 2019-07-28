@@ -18,7 +18,7 @@ $(document).ready(function() {
     // Automatically open envelope
     setInterval(function() {
         $('.section.active .envelope').click();
-    },envelopeDelay);
+    },envelopeDelay * 3);
 
     // Open envelope on click
     $('.envelope').click(function() {
