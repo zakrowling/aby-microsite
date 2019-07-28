@@ -1,5 +1,7 @@
 $(document).ready(function() {
     
+    var envelopeDelay = 2000;
+
     // Initialise pagepiling
     $('#pagepiling').pagepiling({
         direction: 'vertical',
@@ -11,20 +13,22 @@ $(document).ready(function() {
                 'bulletsColor': '#ffffff',
                 'position': 'right'
         },
+        onLeave: function(){
+            openEnvelope(envelopeDelay);
+        },
     });
 
-    var envelopeDelay = 2000;
-
-    // Automatically open envelope
-    setInterval(function() {
-        $('.section.active .envelope').click();
-    },envelopeDelay * 3);
-
     // Open envelope on click
-    $('.envelope').click(function() {
+    $('.envelope').click(function(){
         $(this).parent('.container').addClass('is-open');
         setTimeout(function() {
             $('.is-open .postcard').addClass('is-displayed');
         },envelopeDelay);
     });
 });
+
+function openEnvelope(envelopeDelay){
+    setTimeout(function() {
+        $('.section.active .envelope').click();
+    },envelopeDelay);
+}
