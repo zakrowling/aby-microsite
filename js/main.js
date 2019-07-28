@@ -13,10 +13,18 @@ $(document).ready(function() {
         },
     });
 
+    var envelopeDelay = 2000;
+
+    // Automatically open envelope
+    setInterval(function() {
+        $('.section.active .envelope').click();
+    },envelopeDelay);
+
+    // Open envelope on click
     $('.envelope').click(function() {
         $(this).parent('.container').addClass('is-open');
         setTimeout(function() {
             $('.is-open .postcard').addClass('is-displayed');
-        },1800);
-    })
+        },envelopeDelay);
+    });
 });
